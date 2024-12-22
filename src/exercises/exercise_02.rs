@@ -2,7 +2,13 @@
 // 距離 n とその単位 s が入力されるので、すべての距離を mm に換算する関数を作成してください。
 // 入力される単位は "km", "m", "cm" の 3 種類です。
 pub fn convert_to_mm(n: f64, s: &str) -> Option<f64> {
-    todo!()
+    let result = match s {
+        "km" => n * 1_000_000.0,
+        "m" => n * 1_000.0,
+        "cm" => n * 10.0,
+        _ => return None,
+    };
+    Some(result)
 }
 
 #[cfg(test)]

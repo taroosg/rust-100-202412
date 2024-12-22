@@ -1,7 +1,10 @@
 /// 西暦の計算
 // 2つの西暦 a と b を入力し、a から b が何年間あるかを出力する関数を作成してください。
 pub fn calculate_years(a: u32, b: u32) -> Option<u32> {
-    todo!()
+    match b - a {
+        x if x < 0 => None,
+        x => Some(x),
+    }
 }
 
 #[cfg(test)]

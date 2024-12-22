@@ -1,7 +1,12 @@
 /// 掛け算のリスト
 // 正の整数 1 から 9 に整数 n を掛けた数を半角スペース区切りで出力する関数を作成してください。
 pub fn create_list(n: u32) -> String {
-    todo!()
+    [0; 9]
+        .iter()
+        .enumerate()
+        .map(|(i, x)| ((i + 1) * n as usize).to_string())
+        .collect::<Vec<_>>()
+        .join(" ")
 }
 
 #[cfg(test)]

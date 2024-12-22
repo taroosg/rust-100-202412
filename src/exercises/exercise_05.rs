@@ -1,7 +1,7 @@
 /// 何番目？
 // A〜Z の中から1文字を入力し、アルファベット順で何番目かを出力する関数を作成してください。
 pub fn judge_th(c: char) -> Option<u32> {
-    todo!()
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ".find(c).map(|x| x as u32 + 1)
 }
 
 #[cfg(test)]
