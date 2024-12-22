@@ -1,7 +1,10 @@
 /// 文字列の一致
 // 2 つの文字列 s と t が完全一致している場合は "Yes"、それ以外は "No" を出力する関数を作成してください。
 pub fn is_equal(s: &str, t: &str) -> String {
-    todo!()
+    match s == t {
+        true => "Yes".to_string(),
+        false => "No".to_string(),
+    }
 }
 
 #[cfg(test)]
