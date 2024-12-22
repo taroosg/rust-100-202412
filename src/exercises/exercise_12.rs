@@ -1,7 +1,7 @@
 /// N 文字目まで出力
 // 半角アルファベットで構成された文字列 s と正の整数 n を入力し、1 文字目から n 文字目までを出力する関数を作成してください。
 pub fn get_one_to_n(s: &str, n: usize) -> String {
-    todo!()
+    s.chars().take(n).collect()
 }
 
 #[cfg(test)]
