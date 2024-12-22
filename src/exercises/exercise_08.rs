@@ -1,7 +1,7 @@
 /// 小文字を大文字に
 // 半角アルファベットの小文字で構成された文字列 s を入力し、大文字に変換する関数を作成してください。
 pub fn convert_to_uppercase(s: &str) -> String {
-    todo!()
+    s.to_uppercase()
 }
 
 #[cfg(test)]
