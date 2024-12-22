@@ -1,7 +1,10 @@
 /// 奇数か偶数か
 // 正の整数 n が入力されるので、n が奇数なら "odd"、偶数なら "even" を出力する関数を作成してください。
 pub fn odd_or_even(n: u32) -> String {
-    todo!()
+    match n % 2 {
+        0 => "even".to_string(),
+        _ => "odd".to_string(),
+    }
 }
 
 #[cfg(test)]
