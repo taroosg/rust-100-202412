@@ -1,7 +1,10 @@
 /// 頭文字
 // 苗字と名前がスペース区切りで与えられるので、各頭文字をドット区切りで出力する関数を作成してください。
 pub fn get_initial_from_name(s: &str) -> String {
-    todo!()
+    s.split(" ")
+        .map(|x| x.chars().next().unwrap().to_uppercase().to_string())
+        .collect::<Vec<String>>()
+        .join(".")
 }
 
 #[cfg(test)]
