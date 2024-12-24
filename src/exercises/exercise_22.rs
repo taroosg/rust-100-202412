@@ -1,7 +1,7 @@
 /// 数字の桁数
 // ある 10 進数の正の整数 n が与えられるので、n が何桁かを数字で出力する関数を作成してください。
 pub fn get_number_of_digits(n: u32) -> usize {
-    todo!()
+    n.to_string().len()
 }
 
 #[cfg(test)]
