@@ -1,7 +1,19 @@
 /// 日付のデータ
 // 西暦 y、月 m、日 d をスペース区切りで入力し、/ 区切りでフォーマットした文字列を出力する関数を作成してください。
 pub fn format_ymd(s: &str) -> String {
-    todo!()
+    s.split(' ')
+        // 4桁/2桁/2桁にする
+        .enumerate()
+        .map(|(i, x)| {
+            let num: u32 = x.parse().unwrap();
+            if i == 0 {
+                format!("{:04}", num)
+            } else {
+                format!("{:02}", num)
+            }
+        })
+        .collect::<Vec<String>>()
+        .join("/")
 }
 
 #[cfg(test)]

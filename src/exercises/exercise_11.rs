@@ -1,7 +1,11 @@
 /// カウントダウン
 // 正整数 n が入力されるので、n から 1 まで 1 ずつカウントダウンする関数を作成してください。
 pub fn count_down(n: u32) -> String {
-    todo!()
+    (1..=n)
+        .rev()
+        .map(|x| x.to_string())
+        .collect::<Vec<_>>()
+        .join(" ")
 }
 
 #[cfg(test)]

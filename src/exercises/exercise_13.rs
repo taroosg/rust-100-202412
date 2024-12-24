@@ -1,7 +1,13 @@
 /// 最大と最小
 // 半角スペース区切りで与えられた 5 つの数字の最大値と最小値を出力する関数を作成してください。
 pub fn get_max_and_min(s: &str) -> Option<String> {
-    todo!()
+    s.split(' ')
+        .map(|x| x.parse::<i32>().unwrap())
+        .fold(Some((i32::MIN, i32::MAX)), |acc, x| match acc {
+            Some((max, min)) => Some((max.max(x), min.min(x))),
+            None => None,
+        })
+        .map(|(max, min)| format!("{} {}", max, min))
 }
 
 #[cfg(test)]

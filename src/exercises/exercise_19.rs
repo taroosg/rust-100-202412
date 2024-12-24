@@ -1,7 +1,7 @@
 /// 数字の出力
 // 正の整数 n（最大 2 桁）を 0 埋めして 3 桁で出力する関数を作成してください。
 pub fn zero_padding3(n: u32) -> String {
-    todo!()
+    format!("{:03}", n)
 }
 
 #[cfg(test)]

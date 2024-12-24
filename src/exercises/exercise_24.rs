@@ -1,7 +1,7 @@
 /// 単位の変換
 // n 分から秒へ変換する関数を作成してください。
 pub fn convert_to_seconds(n: u32) -> u32 {
-    todo!()
+    n * 60
 }
 
 #[cfg(test)]

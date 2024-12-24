@@ -1,7 +1,11 @@
 /// どれにしようかな
 // メニューの数 n を入力し、「どれにしようかな」の文字数 21 を用いて選ばれたメニューを出力する関数を作成してください。
 pub fn choice_of_god(n: u32) -> u32 {
-    todo!()
+    let remainder = 21 % n;
+    match remainder {
+        0 => n,
+        _ => remainder,
+    }
 }
 
 #[cfg(test)]

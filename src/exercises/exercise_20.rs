@@ -1,7 +1,7 @@
 /// 一週間の予定
 // 半角スペース区切りで 7 日間の休み情報（yes/no）が入力され、有給申請が必要な日数を出力する関数を作成してください。
 pub fn get_paid_holidays(s: &str) -> usize {
-    todo!()
+    s.split(' ').filter(|&x| x == "no").count()
 }
 
 #[cfg(test)]

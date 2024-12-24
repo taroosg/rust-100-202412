@@ -1,7 +1,7 @@
 /// 文字列から N 番目
 // 半角アルファベット文字列 s と整数 n を入力し、s の n 文字目を出力する関数を作成してください。
 pub fn get_nth_char(s: &str, n: usize) -> Option<char> {
-    todo!()
+    s.chars().nth(n - 1)
 }
 
 #[cfg(test)]

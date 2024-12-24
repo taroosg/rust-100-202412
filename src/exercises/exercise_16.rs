@@ -1,7 +1,7 @@
 /// A の個数
 // 半角アルファベットで構成された文字列 s に含まれる A の数を出力する関数を作成してください。
 pub fn get_number_of_a(s: &str) -> usize {
-    todo!()
+    s.chars().filter(|&c| c == 'A').count()
 }
 
 #[cfg(test)]

@@ -1,7 +1,7 @@
 /// アットマーク
 // 文字列 s の中に含まれる "at" を全て "@" に置換して出力する関数を作成してください。
 pub fn convert_at_to_at_mark(s: &str) -> String {
-    todo!()
+    s.replace("at", "@")
 }
 
 #[cfg(test)]
