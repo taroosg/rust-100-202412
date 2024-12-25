@@ -1,7 +1,7 @@
 /// 天気の表示
 // 降水確率に応じた天気を表示する関数を作成してください。
 pub fn show_weather(n: u32) -> String {
-    todo!()
+    ["sunny", "cloudy", "rainy"][(n / 30) as usize].to_string()
 }
 
 #[cfg(test)]

@@ -1,7 +1,10 @@
 /// 連休の天気
 // 降水確率が 30% 以下の日数を数える関数を作成してください。
 pub fn days_of_go_out(s: &str) -> usize {
-    todo!()
+    s.split(' ')
+        .map(|x| x.parse::<u8>().unwrap())
+        .filter(|&x| x <= 30)
+        .count()
 }
 
 #[cfg(test)]
