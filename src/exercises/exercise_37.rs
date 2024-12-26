@@ -3,7 +3,7 @@
 pub fn convert_number_to_alphabet(s: &str) -> String {
     s.chars()
         .filter_map(|x| x.to_digit(10))
-        .map(|x| (x + 64) as u8 as char)
+        .map(|x| (5 - x + 65) as u8 as char)
         .collect()
 }
 
