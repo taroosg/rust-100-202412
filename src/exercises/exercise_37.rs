@@ -2,7 +2,7 @@
 // 数字の成績をアルファベットに変換する関数を作成してください。
 pub fn convert_number_to_alphabet(s: &str) -> String {
     s.chars()
-        .filter_map(|x| x.to_digit(10)) // 数値に変換
+        .filter_map(|x| x.to_digit(10))
         .map(|x| (x + 64) as u8 as char)
         .collect()
 }
