@@ -1,7 +1,22 @@
 /// 台風の間隔
 // 台風の上陸日から間隔日数を計算する関数を作成してください。
 pub fn get_interval(s: &str) -> String {
-    todo!()
+    s.split_whitespace()
+        .map(|x| x.parse::<u32>().unwrap())
+        .enumerate()
+        .map(|(i, x)| match i {
+            0 => x,
+            _ => {
+                x - s.split_whitespace().collect::<Vec<&str>>()[i - 1]
+                    .parse::<u32>()
+                    .unwrap()
+            }
+        })
+        .enumerate()
+        .filter(|&(i, _)| i != 0)
+        .map(|x| format!("{}", x.1))
+        .collect::<Vec<String>>()
+        .join(" ")
 }
 
 #[cfg(test)]
