@@ -1,7 +1,10 @@
 /// 不思議なタマゴ
 // タマゴをすべて孵化させるための最低歩行距離を計算する関数を作成してください。
 pub fn get_number_of_steps(s: &str) -> u32 {
-    todo!()
+    s.split_whitespace()
+        .map(|x| x.parse::<u32>().unwrap())
+        .max()
+        .unwrap()
 }
 
 #[cfg(test)]
