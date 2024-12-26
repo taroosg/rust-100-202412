@@ -1,7 +1,7 @@
 /// ◯◯ の秋
 // アンケートから「◯◯」の部分を取り出す関数を作成してください。
 pub fn get_autumn(s: &str) -> String {
-    todo!()
+    s.split("noaki").collect::<Vec<&str>>()[0].to_string()
 }
 
 #[cfg(test)]
