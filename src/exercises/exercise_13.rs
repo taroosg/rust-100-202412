@@ -3,7 +3,9 @@
 pub fn get_max_and_min(s: &str) -> Option<String> {
     s.split(' ')
         .map(|x| x.parse::<i32>().unwrap())
-        .fold(Some((i32::MIN, i32::MAX)), |acc, x| acc.map(|(max, min)| (max.max(x), min.min(x))))
+        .fold(Some((i32::MIN, i32::MAX)), |acc, x| {
+            acc.map(|(max, min)| (max.max(x), min.min(x)))
+        })
         .map(|(max, min)| format!("{} {}", max, min))
 }
 
