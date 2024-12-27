@@ -5,8 +5,7 @@ pub fn fire_employees(employees: &str, fired: &str) -> String {
     let fired: Vec<&str> = fired.split(" ").collect();
     employees
         .iter()
-        .filter(|&e| !fired.contains(e))
-        .map(|&e| e)
+        .filter(|&e| !fired.contains(e)).copied()
         .collect::<Vec<&str>>()
         .join(" ")
 }
