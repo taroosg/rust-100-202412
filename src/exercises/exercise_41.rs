@@ -1,7 +1,10 @@
 /// お月見だんご
 // 各子供の要求しただんごの数から、最大5個までしか与えない場合の合計を計算する関数を作成してください。
 pub fn get_number_of_dango(s: &str) -> u32 {
-    todo!()
+    s.split(" ")
+        .map(|x| x.parse::<u32>().unwrap())
+        .map(|x| if x > 5 { 5 } else { x })
+        .sum()
 }
 
 #[cfg(test)]

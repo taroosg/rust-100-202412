@@ -1,7 +1,10 @@
 /// トリック・オア・トリート
 // 入力文字列が "candy" または "chocolate" の場合に "Thanks!" を、それ以外の場合に "No!" を返す関数を作成してください。
 pub fn candy_or_chocolate(s: &str) -> String {
-    todo!()
+    match s {
+        "candy" | "chocolate" => "Thanks!".to_string(),
+        _ => "No!".to_string(),
+    }
 }
 
 #[cfg(test)]

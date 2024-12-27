@@ -1,7 +1,14 @@
 /// リストラ計画
 // 現在の従業員リストから解雇する従業員を除外したリストを返す関数を作成してください。
 pub fn fire_employees(employees: &str, fired: &str) -> String {
-    todo!()
+    let employees: Vec<&str> = employees.split(" ").collect();
+    let fired: Vec<&str> = fired.split(" ").collect();
+    employees
+        .iter()
+        .filter(|&e| !fired.contains(e))
+        .copied()
+        .collect::<Vec<&str>>()
+        .join(" ")
 }
 
 #[cfg(test)]
