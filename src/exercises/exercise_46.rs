@@ -1,7 +1,7 @@
 /// ワインのキャッチコピー
 // 入力文字列を "Best in " に結合して出力する関数を作成してください。
 pub fn best_copy(s: &str) -> String {
-    todo!()
+    "Best in ".to_string() + s
 }
 
 #[cfg(test)]
